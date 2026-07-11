@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: "Courier New", monospace;
+
+    background: #ffd9eb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 2s ease;
+
+    cursor: none;
+
+}
+
+
+
+/* CURSOR */
+
+#cursor {
+
+    position: fixed;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+/* SPARKLES */
+
+#sparkles {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+
+
+.sparkle {
+
+    position: absolute;
+
+    color: #9cff57;
+
+    font-size: 20px;
+
+    animation: sparkleFall linear infinite;
+
+}
+
+
+@keyframes sparkleFall {
+
+    from {
+        transform: translateY(-20vh) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(120vh) rotate(360deg);
+    }
+
+}
+
+
+
+
+
+/* DOODLES */
+
+
+.doodles span {
+
+    position: absolute;
+
+    color: #ff8fc4;
+
+    font-size: 35px;
+
+    opacity: .7;
+
+}
+
+
+
+.doodles span:nth-child(1){
+    top:10%;
+    left:15%;
+}
+
+
+.doodles span:nth-child(2){
+    top:20%;
+    right:20%;
+}
+
+
+.doodles span:nth-child(3){
+    bottom:20%;
+    left:20%;
+}
+
+
+.doodles span:nth-child(4){
+    bottom:15%;
+    right:15%;
+}
+
+
+.doodles span:nth-child(5){
+    top:45%;
+    left:5%;
+}
+
+
+
+
+
+/* SCRAPBOOK */
+
+
+#scrapbook {
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+
+#scrapbook h1 {
+
+    font-size:75px;
+
+    color:#633f55;
+
+}
+
+
+#scrapbook p {
+
+    color:#815c70;
+
+    font-size:20px;
+
+    margin:20px;
+
+}
+
+
+
+button {
+
+    border:none;
+
+    background:#fff7fb;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    cursor:none;
+
+    transition:.4s;
+
+}
+
+
+
+button:hover {
+
+    transform:scale(1.1);
+
+}
+
+
+
+
+
+/* ENERGY */
+
+
+.energyBox {
+
+    width:320px;
+
+    height:18px;
+
+    background:white;
+
+    border-radius:20px;
+
+    margin:40px auto;
+
+    overflow:hidden;
+
+}
+
+
+
+#energyBar {
+
+    height:100%;
+
+    width:0%;
+
+    background:#ff8fc4;
+
+    transition:.4s;
+
+}
+
+
+
+
+
+
+/* GARDEN */
+
+
+#garden {
+
+    display:none;
+
+    text-align:center;
+
+    color:#285c2a;
+
+}
+
+
+
+#garden h1 {
+
+    font-size:45px;
+
+}
+
+
+
+.flowers {
+
+    font-size:45px;
+
+    animation:bloom 2s infinite;
+
+}
+
+
+
+@keyframes bloom {
+
+    50%{
+        transform:scale(1.1);
+    }
+
+}
+
+
+
+
+
+/* ENVELOPE */
+
+
+#envelope {
+
+    width:180px;
+
+    height:120px;
+
+    background:#d9a86c;
+
+    position:relative;
+
+    margin:50px auto;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 25px #0003;
+
+    cursor:none;
+
+}
+
+
+
+.flap {
+
+    position:absolute;
+
+    top:0;
+
+    border-left:90px solid transparent;
+
+    border-right:90px solid transparent;
+
+    border-top:65px solid #c98d55;
+
+}
+
+
+
+.paper-inside {
+
+    font-size:55px;
+
+    padding-top:35px;
+
+}
+
+
+
+.seal {
+
+    position:absolute;
+
+    z-index:5;
+
+    left:75px;
+
+    top:45px;
+
+    font-size:30px;
+
+}
+
+
+
+
+
+/* LETTER */
+
+
+#letter {
+
+    display:none;
+
+}
+
+
+
+.old-paper {
+
+    background:#f8e6c8;
+
+    width:80vw;
+
+    max-width:600px;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 40px #b8865a;
+
+}
+
+
+
+.old-paper h2 {
+
+    color:#633f55;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#typing {
+
+    line-height:1.8;
+
+    color:#594334;
+
+    white-space:pre-line;
+
+}
+
+
+
+
+
+/* KEYBOARD */
+
+
+#keyboard {
+
+    margin-top:30px;
+
+    background:#fff2fa;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    color:#ff7eb7;
+
+    line-height:2;
+
+    letter-spacing:5px;
+
+}
+
+
+
+
+
+/* ENDING */
+
+
+#ending {
+
+    display:none;
+
+    text-align:center;
+
+}
+
+
+
+.bouquet {
+
+    font-size:100px;
+
+}
+
+
+
+.teddy {
+
+    font-size:100px;
+
+}
+
+
+
+#arrow {
+
+    font-size:80px;
+
+}
+
+
+
+#hearts {
+
+    position:absolute;
+
+    inset:0;
+
+}
